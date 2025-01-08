@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>DEI INGA PAARU DA </title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30%;
+            background-color: #000000;
+            color:#0ef ;
+        }
+        
+        .design{
+            border: 3px solid #fff;
+            border-radius: 12px;
+            padding: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .effect{
+            display: inline-block;
+            font-size: 20px;
+            animation: scroll-left 12s linear infinite;
+        }
+        
+        @keyframes scroll-left{
+        
+            from{
+                transform: translateX(100%);
+            }
+        
+            to{
+                transform: translateX(-100%);
+            }
+        
+        }
+    </style>
+    </head>
+    <body>
+        <div class="design">
+            <div class="effect">here is the scrolling text animation </div>
+
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impressive Form Design</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background: linear-gradient(120deg, #77abff, #4facfe);
+            color: blue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form {
+            background: hsl(131, 61%, 42%);
+            backdrop-filter: blur(12px);
+            padding: 28px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form h1 {
+            text-align: center;
+            color: beige;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: beige;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form input[type="password"] {
+            width: 100%;
+            font-size: medium;
+            padding: 8px 10px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form input[type="text"]:focus,
+        .form input[type="email"]:focus,
+        .form input[type="password"]:focus {
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .form button {
+            width: 100%;
+            font-size: medium;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: beige;
+            color: hsl(131, 61%, 42%);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .form p {
+            text-align: center;
+            margin-top: 15px;
+            color: beige;
+        }
+
+        .form p a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <h1>Sign Up</h1>
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#">Sign In</a></p>
+    </div>
+</body>
+</html>

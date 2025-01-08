@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Responsive Media Page</title>
+        <style>
+            body
+            {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                line-height: 1.5;
+                background: linear-gradient(#dd8c14,#28bcd6)
+            }
+            header{
+                text-align: center;
+                padding: 50px 22px;
+                background: linear-gradient(130deg,#a5a5a5);
+            }
+            header h1{
+                font-size: 2em;
+                color: aqua;
+                margin-bottom: 35px;
+            }
+            header p{
+                font-size: 1.2em;
+                margin-bottom: 35px;
+            }
+            .mda{
+                background: #a5a5a5;
+                color: antiquewhite;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 2em;
+                box-shadow: 35px;
+                text-decoration: none;
+                transition:transform .5s,box-shadow .5s;
+            }
+            header .mda:hover{
+                transform: translateY(-6px);
+                box-shadow: 0 10px 20px rgb(21, 28, 241);
+            }
+            .grid-view{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 20px;
+                margin: 20px;
+                max-width: 1150px;
+            }
+            .grid{
+                background:linear-gradient(#f7f1f4,#ffea00) ;
+                border-radius: 18px;
+                text-align: center;
+                box-shadow: 0 10px 20px rgb(0, 0, 0);
+            }
+            .grid p{
+
+            }
+            footer{
+                text-align: center;
+                padding: 20px;
+                background: gray;
+                color: bisque;
+                font-weight: bold;
+            }
+            @media(max-width:1150px) {
+                .grid-view{
+                    grid-template-columns: repeat(2,8fr);
+                }
+                header h1{
+                    
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <header>
+            <h1>Landing Page</h1>
+            <p>Here we can experience the responsive design </p>
+            <a href="https://youtu.be/kaUaAPC58Ro" class="mda">Just Begin!</a>
+        </header>
+        <section class="grid-view">
+            <div class="grid">
+                <h2>Responsive Media</h2>
+                <p>Here is a innovative design w</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media2</h2>
+                <p>Experience the seamless responsive to all over the devices and screen size</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media3</h2>
+                <p>End-user can enjoy the edge-cutting</p>
+
+            </div>
+            <div class="grid">
+                <h2>Responsive Media4</h2>
+                <p>&copy;All Rights Reserved.<a href="">Term of Use</a></p>
+
+            </div>
+        </section>
+    </body>
+</html>

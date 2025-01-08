@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            HTML API APP
+        </title>
+    </head>
+    <body>
+        <h1>
+            Weather Application
+        </h1>
+        <button id="getclick">Check Weather</button>
+        <p id="temp">To Know the Weather Update</p>
+        <script>
+            let temp = document.getElementById('temp');
+            let checkWeather = document.getElementById('getclick');
+
+            checkWeather.addEventListener('click', () => {
+                if ('geolocation' in navigator) {
+                    navigator.geolocation.getCurrentPosition((position) => {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        localStorage.setItem('latitude', latitude);
+                        localStorage.setItem('longitude', longitude);
+
+                        const URL = https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true;
+
+                        fetch(URL)
+                            .then(response => response.json())
+                            .then(data => {
+                                const weatherInfo = Location: Latitude ${latitude}, Longitude ${longitude}, Temperature: ${data.current_weather.temperature}°C;
+                                temp.textContent = weatherInfo;
+                            })
+                            .catch(error => {
+                                temp.textContent = 'Error fetching weather data.';
+                                console.error(error);
+                            });
+                    });
+                } else {
+                    temp.textContent = 'Geolocation is not supported by your browser.';
+                }
+            });
+        </script>
+    </body>
+</html>
