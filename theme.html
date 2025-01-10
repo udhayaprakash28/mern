@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Animation Using JavaScript</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: whitesmoke;
+            margin: auto;
+            padding: 0;
+            transition: background 0.5s, color 0.5s;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: burlywood;
+        }
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+        .lst-item {
+            background: white;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .lst-item:hover {
+            box-shadow: 0px 8px 20px black;
+        }
+        .lst-item::before {
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom right, #007fff, #00ff7f);
+            left: 0;
+            top: 0;
+            transition: width 0.4s;
+        }
+        .lst-item:hover::before {
+            width: 100%;
+        }
+        .button {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        .button:hover {
+            background: #fababf;
+        }
+        .dark-mode {
+            background: #333;
+            color: whitesmoke;
+        }
+        .dark-mode .button {
+            background: #555;
+            color: whitesmoke;
+        }
+        .dark-mode h2 {
+            color: lightgoldenrodyellow;
+        }
+        .dark-mode .lst-item {
+            background: #444;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="DarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <h2>Theme Animation Using JS</h2>
+        <ul class="list">
+            <li class="lst-item">
+                <span>JavaScript</span>
+                <button class="button">Start</button>
+            </li>
+            <li class="lst-item">
+                <span>Master in JavaScript</span>
+                <button class="button">Access</button>
+            </li>
+            <li class="lst-item">
+                <span>Developing a FullStack Application</span>
+                <button class="button">Enroll</button>
+            </li>
+            <li class="lst-item">
+                <span>Creating Tech Blogs</span>
+                <button class="button">Explore</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function DarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
